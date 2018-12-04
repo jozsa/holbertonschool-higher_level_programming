@@ -9,19 +9,23 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *end;
+	listint_t *fast;
+	listint_t *slow;
 
-	end = list;
+	fast = list;
+	slow = list;
 
-	if (end == NULL)
+	if (!list)
 		return (0);
-	while (end)
+	while (fast)
 	{
-		if (end->next == NULL)
-			return (0);
-		if (end->next == list)
+		fast = fast->next;
+		if (fast == slow)
 			return (1);
-		end = end->next;
+		fast = fast->next;
+		if (fast == slow)
+			return (1);
+		slow = slow->next;
 	}
 	return (0);
 }
