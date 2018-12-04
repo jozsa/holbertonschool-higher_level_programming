@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for letter in range(97, 123):
-    print(chr(letter), end="")
+i = 97
+while i < 123:
+    print(chr(i), end="")
+    i = i + 1;
