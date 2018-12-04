@@ -7,7 +7,7 @@ if number < 0:
     lastdigit = lastdigit * -1
 if lastdigit == 0:
     print('{:d} and is 0'.format(lastdigit))
-elif lastdigit < 6:
+elif lastdigit < 6 and lastdigit != 0:
     print('{:d} and is less than 6 and not 0'.format(lastdigit))
-else:
+elif lastdigit > 5:
     print('{:d} and is greater than 5'.format(lastdigit))
