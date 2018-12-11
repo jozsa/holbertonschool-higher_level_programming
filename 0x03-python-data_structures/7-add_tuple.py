@@ -2,6 +2,8 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     len_a = len(tuple_a)
     len_b = len(tuple_b)
+    tuple_a = tuple(x if x else '0' for x in tuple_a)
+    tuple_b = tuple(x if x else '0' for x in tuple_b)
     if len_a or len_b < 2:
         for i in range(2):
             tuple_a = tuple_a + (0,)
