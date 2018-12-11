@@ -9,4 +9,3 @@ def print_matrix_integer(matrix=[[]]):
                 sep = ''
             print('{:d}'.format(matrix[row][column]), end=sep)
         print()
-    
