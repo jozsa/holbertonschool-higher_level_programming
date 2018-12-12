@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
-    len_a = len(tuple_a)
-    len_b = len(tuple_b)
     if type(tuple_a) is not tuple:
         tuple_a = (0, 0)
+    len_a = len(tuple_a)
     if type(tuple_b) is not tuple:
         tuple_b = (0, 0)
+    len_b = len(tuple_b)
     tuple_a = tuple(x if x else '0' for x in tuple_a)
     tuple_b = tuple(x if x else '0' for x in tuple_b)
     if len_a or len_b < 2:
