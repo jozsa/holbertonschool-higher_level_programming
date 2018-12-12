@@ -3,7 +3,10 @@
 #include <stdio.h>
 
 /**
- * lol
+ * is_palindrome - Tests if a singly linked list is a palindrome
+ * @head: The singly linked list to be checked
+ * 
+ * Return: 1 if palindrome, 0 if not
  */
 
 int is_palindrome(listint_t **head)
@@ -20,7 +23,7 @@ int is_palindrome(listint_t **head)
 		count++;
 	}
 	if (front->n == end->n)
-	{	
+	{
 		while (sub <= (count / 2))
 		{
 			end = *head;
@@ -28,11 +31,8 @@ int is_palindrome(listint_t **head)
 				end = end->next;
 			if (front->n != end->n)
 				return (0);
-			else
-			{
-				sub++;
-				front = front->next;
-			}
+			sub++;
+			front = front->next;
 		}
 	}
 	return (1);
