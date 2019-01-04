@@ -18,8 +18,8 @@ class Square:
             raise TypeError('position must be a tuple of 2 positive integers')
         if len(position) != 2:
             raise TypeError('position must be a tuple of 2 positive integers')
-        if not all(isinstance(n, int) for n in range(len(position))):
-            raise TypeError('position must be a tuple of 2 positive integers')        
+        if not all(isinstance(n, int) for n in position):
+            raise TypeError('position must be a tuple of 2 positive integers')
         if not all(n >= 0 for n in position):
             raise TypeError('position must be a tuple of 2 positive integers')
         self.position = position
