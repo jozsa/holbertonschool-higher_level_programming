@@ -6,13 +6,23 @@ class Square:
         __size (int, optional): instantizes a Square with a defined size
         __position (tuple of ints, optional): Position of the Square
     """
-    __size = None
-    __position = None
 
     def __init__(self, size=0, position=(0, 0)):
         """Instantation of Square class with optional size and position"""
-        self.__size = size
-        self.__position = position
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.size = size
+        if not isinstance(position, tuple):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if len(position) != 2:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if not all(n >= 0 for n in position):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        if not all(isinstance(n, int) for n in range(len(position))):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        self.position = position
 
     @property
     def size(self):
@@ -25,10 +35,6 @@ class Square:
     @size.setter
     def size(self, value):
         self.__size = value
-        if type(value) is not int:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
 
     @property
     def position(self):
@@ -41,12 +47,6 @@ class Square:
     @position.setter
     def position(self, value):
         self.__position = value
-        if len(value) != 2 or not isinstance(value, tuple):
-            raise TypeError('position must be a tuple of 2 positive integers')
-        if not all(n > 0 for n in value):
-            raise TypeError('position must be a tuple of 2 positive integers')
-        if not all(isinstance(n, int) for n in range(len(value))):
-            raise TypeError('position must be a tuple of 2 positive integers')
 
     def area(self):
         """Returns the current square area"""
