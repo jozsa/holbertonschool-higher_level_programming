@@ -1,0 +1,70 @@
+===========================
+How to Use 0-add_integer.py
+===========================
+
+Only one function - ``add_integer()``
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of its arguments.
+Only one argument is required - if a 2nd argument is not provided, it is set to 98 by default.
+
+::
+	>>> add_integer = __import__('0-add_integer').add_integer 
+	>>> add_integer(0)
+	98
+
+	>>> add_integer(2, 100)
+	102
+
+	>>> add_integer(-6)
+	92
+
+It also works with floating-point values. Floats will be casted into integers.
+
+::
+	>>> add_integer(2.5, 9)
+	11
+
+Non-Numbers
+===========
+
+``add_integer`` does not work with non-integers or non-floats.
+
+::
+	>>> add_integer('lol', 3)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in add_integer
+	TypeError: a must be an integer
+
+::
+	>>> add_integer(4, [3, 2, 1])
+	Traceback (most recent call last):
+	  File "/usr/lib/python3.4/doctest.py", line 1318, in __run
+	    compileflags, 1), test.globs)
+	  File "<doctest 0-add_integer.txt[5]>", line 1, in <module>
+	    add_integer(4, [3, 2, 1])
+	  File "/home/vagrant/holbertonschool-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 10, in add_integer
+	    raise TypeError('b must be an integer')
+	TypeError: b must be an integer
+
+::
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in add_integer
+	TypeError: a must be an integer
+
+Arguments
+=========
+
+``add_integer()`` takes 1-2 arguments.
+
+::
+	>>> add_integer(3, 1, 200)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
