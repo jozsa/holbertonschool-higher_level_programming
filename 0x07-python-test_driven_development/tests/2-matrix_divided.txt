@@ -1,0 +1,62 @@
+==============================
+How to Use 2-matrix_divided.py
+==============================
+
+Only one function - ``matrix_divided()``
+
+Numbers
+=======
+
+``matrix_divided()`` divides all elements of a matrix by one divisor.
+Each element and the divisor must be numbers (integers or floats).
+
+::
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 2)
+	[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+::
+	>>> matrix = [[5.3, 210.1], [2, 1]]
+	>>> matrix_divided(matrix, 3)
+	[[1.77, 70.03], [0.67, 0.33]]
+
+::
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 5, in matrix_divided
+	ZeroDivisionError: division by zero
+
+::
+	>>> matrix_divided(matrix, 'string')
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in matrix_divided
+	TypeError: div must be a number
+
+Copying Matrix
+==============
+
+A new matrix is returned, the old matrix is not affected.
+
+::
+	>>> matrix = [[2, 4, 8], [10, 12, 16]]
+	>>> matrix_divided(matrix, 4)
+	[[0.5, 1.0, 2.0], [2.5, 3.0, 4.0]]
+	>>> print(matrix)
+	[[2, 4, 8], [10, 12, 16]]
+
+Size of Matrix
+==============
+
+The matrix must be a square - all the row lengths must be the same.
+
+::
+	>>> matrix = [[2, 4, 8], [10, 1]]
+	>>> matrix_divided(matrix, 4)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in matrix_divided
+	TypeError: Each row of the matrix must have the same size
+
