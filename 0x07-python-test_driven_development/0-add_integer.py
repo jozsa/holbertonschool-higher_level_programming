@@ -5,6 +5,7 @@ This module adds two arguments given to add_integer and returns the sum.
 
 """
 
+
 def add_integer(a, b=98):
     """
     Returns the sum of two integers. 2nd argument is set to 98 by default.
