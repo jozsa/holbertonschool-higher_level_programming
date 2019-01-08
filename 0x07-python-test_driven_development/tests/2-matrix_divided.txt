@@ -35,6 +35,27 @@ Each element and the divisor must be numbers (integers or floats).
 	  File "<stdin>", line 3, in matrix_divided
 	TypeError: div must be a number
 
+Type of List
+============
+
+The matrix must be a list of lists.
+
+::
+	>>> matrix = [1, 2, 3]
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in matrix_divided
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+	
+::
+	>>> matrix = "hi"
+	>>> matrix_divided(matrix, 2)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "<stdin>", line 3, in matrix_divided
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 Copying Matrix
 ==============
 
@@ -50,7 +71,7 @@ A new matrix is returned, the old matrix is not affected.
 Size of Matrix
 ==============
 
-The matrix must be a square - all the row lengths must be the same.
+All the row lengths of the matrix must be the same.
 
 ::
 	>>> matrix = [[2, 4, 8], [10, 1]]
