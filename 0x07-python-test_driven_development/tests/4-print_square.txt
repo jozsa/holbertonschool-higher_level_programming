@@ -21,8 +21,6 @@ Size must be an integer
 ::
 	>>> print_square('rectangle')
 	Traceback (most recent call last):
-	  File "<stdin>", line 1, in <module>
-	  File "<stdin>", line 3, in print_square
 	TypeError: size must be an integer
 
 It does not work with floating-point values or negative numbers.
@@ -30,13 +28,9 @@ It does not work with floating-point values or negative numbers.
 ::
 	>>> print_square(3.5)
 	Traceback (most recent call last):
-	  File "<stdin>", line 1, in <module>
-	  File "<stdin>", line 3, in print_square
 	TypeError: size must be an integer
 
 ::
 	>>> print_square(-100)
 	Traceback (most recent call last):
-	  File "<stdin>", line 1, in <module>
-	  File "<stdin>", line 5, in print_square
 	ValueError: size must be >= 0

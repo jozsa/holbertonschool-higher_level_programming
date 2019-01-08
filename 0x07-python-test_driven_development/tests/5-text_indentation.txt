@@ -1,0 +1,45 @@
+================================
+How to use 5-text_indentation.py
+================================
+
+Only one function - ``text_indentation()``
+
+Strings
+=======
+
+``text_indentation()`` prints text with two newlines after these characters:
+. ? :
+The argument must be a string.
+
+::
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation("Testing: does this work? Hopefully. See!")
+	Testing:
+	<BLANKLINE>
+	does this work?
+	<BLANKLINE>
+	Hopefully.
+	<BLANKLINE>
+	See!
+
+::
+	>>> text_indentation([3, 1, 0])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+Leading/trailing spaces are removed.
+
+::
+	>>> text_indentation("Testing:    Works")
+	Testing:
+	<BLANKLINE>
+	Works
+
+::
+	>>> text_indentation("        haha.")
+	haha.
+	<BLANKLINE>
+
+::
+	>>> text_indentation("Foobar!         ")
+	Foobar!
