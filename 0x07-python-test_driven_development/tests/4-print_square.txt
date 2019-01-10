@@ -34,3 +34,13 @@ It does not work with floating-point values or negative numbers.
 	>>> print_square(-100)
 	Traceback (most recent call last):
 	ValueError: size must be >= 0
+
+Arguments
+=========
+
+One argument is required.
+
+::
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'

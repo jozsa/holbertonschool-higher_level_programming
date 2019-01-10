@@ -28,3 +28,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string(self):
         self.assertEqual(max_integer('lol'), 'o')
+
+    def test_one_element(self):
+        self.assertEqual(max_integer([4]), 4)
+
+    def test_empty_list(self):
+        self.assertEqual(max_integer([]), None)
