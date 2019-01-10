@@ -8,6 +8,7 @@ class Rectangle:
         number_of_instances: Number of instances
         incremented with instance instantiation
         and decremented with instance deletion
+        print_symbol: Symbol to use for printing with str()
     """
     number_of_instances = 0
     print_symbol = '#'
@@ -64,6 +65,7 @@ class Rectangle:
         return perimeter
 
     def __str__(self):
+        """Prints a string representation of the square with #"""
         ret_str = ''
         for i in range(self.height):
             ret_str += str(self.print_symbol) * self.width + '\n'
@@ -71,9 +73,11 @@ class Rectangle:
         return ret_str
 
     def __repr__(self):
+        """Prints a string representation of the square with #"""
         return 'Rectangle({}, {})'.format(self.width, self.height)
 
     def __del__(self):
+        """Deletes an instance of Rectangle"""
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
         del self
