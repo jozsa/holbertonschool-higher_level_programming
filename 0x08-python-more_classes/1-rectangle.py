@@ -29,11 +29,11 @@ class Rectangle:
         self.__width = value
 
     @property
-    """Property getter of private attribute height
-
-    Property setter: height(self, value) sets the size of the Rectangle
-    """
     def height(self):
+        """Property getter of private attribute height
+
+        Property setter: height(self, value) sets the size of the Rectangle
+        """
         return self.__height
 
     @height.setter
