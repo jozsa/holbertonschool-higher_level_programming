@@ -18,58 +18,56 @@ Each item in each matrix must be an integer or float.
 
 ::
 	>>> lazy_matrix_mul('haha', [[3, 4], [4, 6]])
-	Traceback (most recent call last):
-	TypeError: m_a must be a list
+	NotImplemented
 
 ::
 	>>> lazy_matrix_mul([[3, 4], [4, 6]], 'haha')
-	Traceback (most recent call last):
-	TypeError: m_b must be a list
+	NotImplemented
 
 ::
 	>>> lazy_matrix_mul([[4, 2], [7, 1]], [7, 1, 0])
 	Traceback (most recent call last):
-	TypeError: m_b must be a list of lists
+	ValueError: objects are not aligned
 
 ::
 	>>> lazy_matrix_mul([7, 1, 0], [[4, 2], [7, 1]])
 	Traceback (most recent call last):
-	TypeError: m_a must be a list of lists
+	ValueError: objects are not aligned
 
 ::
 	>>> lazy_matrix_mul([], [[4, 2], [7, 1]])
 	Traceback (most recent call last):
-	ValueError: m_a can't be empty
+	ValueError: objects are not aligned
 
 ::
 	>>> lazy_matrix_mul([[4, 2], [7, 1]], [])
 	Traceback (most recent call last):
-	ValueError: m_b can't be empty
+	ValueError: objects are not aligned
 
 ::
 	>>> lazy_matrix_mul([['a', 'b'], ['c', 'd']], [[4, 2], [7, 1]])
 	Traceback (most recent call last):
-	TypeError: m_a should contain only integers or floats
+	ValueError: data type must provide an itemsize
 
 ::
 	>>> lazy_matrix_mul([[4, 2], [7, 1]], [['a', 'b'], ['c', 'd']])
 	Traceback (most recent call last):
-	TypeError: m_b should contain only integers or floats
+	ValueError: data type must provide an itemsize
 
 ::
 	>>> lazy_matrix_mul([[4], [4, 2]], [[7], [1]])
 	Traceback (most recent call last):
-	TypeError: each row of m_a must should be of the same size
+	ValueError: setting an array element with a sequence.
 
 ::
 	>>> lazy_matrix_mul([[7], [1]], [[4], [4, 2]])
 	Traceback (most recent call last):
-	TypeError: each row of m_b must should be of the same size
+	ValueError: setting an array element with a sequence.
 
 ::
 	>>> lazy_matrix_mul([[2, 2], [2, 2]], [[2, 2], [2, 2], [2, 2]])
 	Traceback (most recent call last):
-	ValueError: m_a and m_b can't be multiplied
+	ValueError: objects are not aligned
 
 ::
 	>>> lazy_matrix_mul([[3, 4]])
