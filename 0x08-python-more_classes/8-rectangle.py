@@ -88,4 +88,8 @@ class Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
-        return max(rect_1.area(), rect_2.area())
+        if rect_1.area() == rect_2.area():
+            bigger = rect_1
+        else:
+            bigger = max(rect_1.area(), rect_2.area())
+        return bigger
