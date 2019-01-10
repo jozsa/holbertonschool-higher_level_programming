@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+"""matrix_mul(m_a, m_b)
+
+One function that multiples two matrices
+"""
+
+
 def matrix_mul(m_a, m_b):
+    """
+    Returns a new matrix with the multiplied values
+    """
     if not isinstance(m_a, list):
         raise TypeError('m_a must be a list')
     if not isinstance(m_b, list):
