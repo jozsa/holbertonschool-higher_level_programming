@@ -1,0 +1,40 @@
+====================
+How to Use 1-my_list
+====================
+
+Class MyList inherited from list
+Only one function - ``print_sorted()``
+
+Integers
+========
+
+``print_sorted()`` prints a sorted list using the given list.
+The list will only contain integers.
+
+::
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList([7, 10, 9, 8])
+	>>> my_list.print_sorted()
+	[7, 8, 9, 10]
+	>>> print(my_list)
+	[7, 10, 9, 8]
+
+::
+	>>> my_list = MyList([-300, 710, 120])
+	>>> my_list.print_sorted()
+	[-300, 120, 710]
+
+::
+	>>> my_list = MyList([42, 42, -1, 710])
+	>>> my_list.print_sorted()
+	[-1, 42, 42, 710]
+
+Arguments
+=========
+
+``print_sorted()`` takes no arguments (self is already a default argument).
+
+::
+	>>> my_list.print_sorted("hi")
+	Traceback (most recent call last):
+	TypeError: print_sorted() takes 1 positional argument but 2 were given
