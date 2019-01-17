@@ -3,7 +3,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle instantiated with width and height
+    """Rectangle subclass of BaseGeometry instantiated with width and height
 
     Attributes:
         width (int, required): width to instantiate rectangle with
