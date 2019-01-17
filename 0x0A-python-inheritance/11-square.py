@@ -17,6 +17,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """Redefines str() and print() to print a visual
-        representation of the square with the length of 
+        representation of the square with the length of
         its sides."""
         return '[Square] {}/{}'.format(self.__size, self.__size)
