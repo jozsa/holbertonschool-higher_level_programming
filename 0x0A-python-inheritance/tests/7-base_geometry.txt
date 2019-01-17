@@ -1,0 +1,43 @@
+=============================
+How to Use 7-base_geometry.py
+=============================
+
+This module has a class BaseGeometry with two functions:
+``area()`` which is not implemented yet.
+``integer_validator()`` which checks whether value is an integer.
+
+Integers
+========
+
+``integer_validator()`` checks if the 2nd argument is an integer
+that is more than 0 and raises an error if it is not.
+
+::
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("hi", "John")
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+::
+	>>> bg.integer_validator("hi", -3)
+	Traceback (most recent call last):
+	ValueError: hi must be greater than 0
+
+::
+	>>> bg.integer_validator("hi", 5)
+
+Arguments
+=========
+
+``integer_validator()`` requires two arguments.
+
+::
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+::
+	>>> bg.integer_validator(2)
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
