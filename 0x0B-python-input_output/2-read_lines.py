@@ -17,7 +17,7 @@ def read_lines(filename="", nb_lines=0):
     with open(filename, encoding='utf-8') as a_file:
         for line in a_file:
             if line_count < nb_lines:
-                print(line.rstrip())
+                print(line, end='')
             line_count += 1
         if nb_lines >= line_count or nb_lines <= 0:
             a_file.seek(0)
