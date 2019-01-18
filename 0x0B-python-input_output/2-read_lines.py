@@ -21,4 +21,4 @@ def read_lines(filename="", nb_lines=0):
             line_count += 1
         if nb_lines >= line_count or nb_lines <= 0:
             a_file.seek(0)
-            print(a_file.read().rstrip())
+            print(a_file.read(), end='')

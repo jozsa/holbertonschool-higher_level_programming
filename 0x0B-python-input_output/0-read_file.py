@@ -12,5 +12,5 @@ def read_file(filename=""):
     """
     Prints a file to standard output
     """
-    with open(filename, encoding='utf-8') as a_file:
-        print(a_file.read().rstrip())
+    with open(filename, mode='r+', encoding='utf-8') as a_file:
+        print(a_file.read(), end="")
