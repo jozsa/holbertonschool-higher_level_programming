@@ -10,8 +10,6 @@ import json
 
 def class_to_json(obj):
     """
-    Converts class' dict into str then
-    returns the dict associated with that str.
+    Returns the dict associated with obj
     """
-    obj_dict_str = json.dumps(obj.__dict__)
-    return json.loads(obj_dict_str)
+    return obj.__dict__
