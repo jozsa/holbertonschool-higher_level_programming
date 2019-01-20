@@ -12,6 +12,7 @@ class Square(Rectangle):
         """Instantation of Square class instance with
         required size. Instantation is inherited from
         Rectangle class with the addition of size"""
+        super().integer_validator('size', size)
         super().__init__(size, size)
         self.__size = size
 
