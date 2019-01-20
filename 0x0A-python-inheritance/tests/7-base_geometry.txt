@@ -6,6 +6,7 @@ This module has a class BaseGeometry with two functions:
 ``area()`` which is not implemented yet.
 ``integer_validator()`` which checks whether value is an integer.
 
+
 Integers
 ========
 
@@ -25,7 +26,34 @@ that is more than 0 and raises an error if it is not.
 	ValueError: hi must be greater than 0
 
 ::
-	>>> bg.integer_validator("hi", 5)
+	>>> bg.integer_validator("hi", 0)
+	Traceback (most recent call last):
+	ValueError: hi must be greater than 0
+
+::
+	>>> bg.integer_validator("hi", (4,))
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+::
+	>>> bg.integer_validator("hi", [6])
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+::
+	>>> bg.integer_validator("hi", True)
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+::
+	>>> bg.integer_validator("hi", {4, 6})
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+::
+	>>> bg.integer_validator("hi", None)
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
 
 Arguments
 =========
@@ -41,3 +69,13 @@ Arguments
 	>>> bg.integer_validator(2)
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+area()
+======
+
+``area()`` is an unimplemented class method.
+
+::
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
