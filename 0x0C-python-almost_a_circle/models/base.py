@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+This module has one class Base
+"""
 import json
 
 
