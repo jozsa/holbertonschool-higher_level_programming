@@ -367,6 +367,9 @@ class TestToDictionary(unittest.TestCase):
         self.assertEqual(s1_dict, {'x': 2, 'y': 9, 'id': 42, 'size': 4})
 
     def test_same_attrs_diff_obj(self):
+        """Update square instance with same
+        attributes as another instance, test
+        that they are both different objects"""
         s2 = Square(3)
         s2.update(**self.s1_dict)
         self.assertIsNot(self.s1, s2)
