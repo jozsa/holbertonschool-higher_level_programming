@@ -22,6 +22,7 @@ class Base:
             self.id = Base.__nb_objects
 
     def reset_nb_objects():
+        """Resets __nb_objects to 0 for testing purposes"""
         Base.__nb_objects = 0
 
     @staticmethod
