@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This module has one class, Square,
+inherited from Rectangle
+"""
 from models.base import Base
 from models.rectangle import Rectangle
 
