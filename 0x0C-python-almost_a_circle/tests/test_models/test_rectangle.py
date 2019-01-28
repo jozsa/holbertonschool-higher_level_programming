@@ -7,6 +7,7 @@ from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestRectangleArgs(unittest.TestCase):
     """
     Instantation of Rectangle requires two to five arguments.
@@ -63,9 +64,11 @@ class TestRectangleArgs(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(4, 5, 6, 7, 8, 9)
 
+
 class TestRectangleSubClass(unittest.TestCase):
     def test_subclass(self):
         self.assertEqual(issubclass(Rectangle, Base), True)
+
 
 class TestArgValidation(unittest.TestCase):
     def test_string_width(self):
@@ -100,6 +103,7 @@ class TestArgValidation(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(6, 6, 6, -6)
 
+
 class TestArea(unittest.TestCase):
     def setUp(self):
         Base.reset_nb_objects()
@@ -116,6 +120,7 @@ class TestArea(unittest.TestCase):
         r1 = Rectangle(2, 2)
         with self.assertRaises(TypeError):
             r1.area(4)
+
 
 class TestDisplay(unittest.TestCase):
     def setUp(self):
@@ -139,6 +144,7 @@ class TestDisplay(unittest.TestCase):
         r1 = Rectangle(3, 2)
         with self.assertRaises(TypeError):
             r1.display(2)
+
 
 class TestStrOverride(unittest.TestCase):
     def setUp(self):
@@ -164,6 +170,7 @@ class TestStrOverride(unittest.TestCase):
         r1 = Rectangle(1, 2)
         with self.assertRaises(TypeError):
             r1.__str__(2)
+
 
 class TestUpdateArgsRectangle(unittest.TestCase):
     def setUp(self):
@@ -226,6 +233,7 @@ class TestUpdateArgsRectangle(unittest.TestCase):
     def test_update_no_args(self):
         with self.assertRaises(TypeError):
             self.r1.update()
+
 
 class TestUpdateKwargsRectangle(unittest.TestCase):
     def setUp(self):
@@ -300,6 +308,7 @@ class TestUpdateKwargsRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.r1.update(y=[4, 5])
 
+
 class TestToDictionary(unittest.TestCase):
     def setUp(self):
         Base.reset_nb_objects()
@@ -313,12 +322,14 @@ class TestToDictionary(unittest.TestCase):
         self.assertEqual(type(self.r1_dict), dict)
 
     def test_to_dictionary(self):
-        self.assertEqual(self.r1_dict, {'x': 2, 'y': 9, 'id': 710, 'height': 3, 'width': 4})
+        self.assertEqual(self.r1_dict, {'x': 2, 'y': 9, 'id': 710,
+                                        'height': 3, 'width': 4})
 
     def test_update_to_dictionary(self):
         self.r1.update(id=42)
         r1_dict = self.r1.to_dictionary()
-        self.assertEqual(r1_dict, {'x': 2, 'y': 9, 'id': 42, 'height': 3, 'width': 4})
+        self.assertEqual(r1_dict, {'x': 2, 'y': 9, 'id': 42,
+                                   'height': 3, 'width': 4})
 
     def test_same_attrs_diff_obj(self):
         r2 = Rectangle(3, 4)

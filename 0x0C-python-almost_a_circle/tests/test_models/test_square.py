@@ -8,6 +8,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestSquareArgs(unittest.TestCase):
     """
     Instantation of Square requires one to four arguments.
@@ -60,9 +61,11 @@ class TestSquareArgs(unittest.TestCase):
         self.assertEqual(s1.size == s1.width, True)
         self.assertEqual(s1.size == s1.height, True)
 
+
 class TestSquareSubClass(unittest.TestCase):
     def test_subclass(self):
         self.assertEqual(issubclass(Square, Rectangle), True)
+
 
 class TestArgValidation(unittest.TestCase):
     def test_string_size(self):
@@ -89,6 +92,7 @@ class TestArgValidation(unittest.TestCase):
         with self.assertRaises(ValueError):
             Square(3, 3, -3)
 
+
 class TestArea(unittest.TestCase):
     def setUp(self):
         Base.reset_nb_objects()
@@ -100,6 +104,7 @@ class TestArea(unittest.TestCase):
     def test_area_multiple_args(self):
         s1 = Square(4, 1, 3, 2)
         self.assertEqual(s1.area(), 16)
+
 
 class TestDisplay(unittest.TestCase):
     def setUp(self):
@@ -123,6 +128,7 @@ class TestDisplay(unittest.TestCase):
         s1 = Square(3)
         with self.assertRaises(TypeError):
             s1.display(3)
+
 
 class TestStrOverride(unittest.TestCase):
     def setUp(self):
@@ -207,6 +213,7 @@ class TestUpdateArgsSquare(unittest.TestCase):
         with self.assertRaises(TypeError):
             self.s1.update()
 
+
 class TestUpdateKwargsSquare(unittest.TestCase):
     def setUp(self):
         Base.reset_nb_objects()
@@ -264,6 +271,7 @@ class TestUpdateKwargsSquare(unittest.TestCase):
     def valid_keyword_invalid_arg(self):
         with self.assertRaises(TypeError):
             self.s1.update(x=[6, 6])
+
 
 class TestToDictionary(unittest.TestCase):
     def setUp(self):

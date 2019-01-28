@@ -7,6 +7,7 @@ from models.rectangle import Rectangle
 from models.square import Square
 import os
 
+
 class TestBaseIdOrder(unittest.TestCase):
     def setUp(self):
         Base.reset_nb_objects()
@@ -49,6 +50,7 @@ class TestBaseIdOrder(unittest.TestCase):
         b1 = Base(42)
         self.assertEqual(b1.id, 42)
 
+
 class TestToJsonString(unittest.TestCase):
     def test_empty_list(self):
         r = Base.to_json_string(None)
@@ -59,8 +61,12 @@ class TestToJsonString(unittest.TestCase):
         self.assertEqual(r, "[]")
 
     def test_two_dicts(self):
-        r = Base.to_json_string([{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}])
+        r = Base.to_json_string([{"y": 8, "x": 2, "id": 1,
+                                  "width": 10, "height": 7},
+                                 {"y": 0, "x": 0, "id": 2,
+                                  "width": 2, "height": 4}])
         self.assertEqual(type(r), str)
+
 
 class TestSaveToFile(unittest.TestCase):
     def test_none(self):
