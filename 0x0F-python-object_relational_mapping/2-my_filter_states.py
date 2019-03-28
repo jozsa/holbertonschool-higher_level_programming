@@ -4,6 +4,8 @@ Connect to MySQL database using MySQLdb & list
 all states that match the 4th argument passed
 
 Takes four arguments: MySQL username, MySQL password, database name, state name
+
+This script is not safe from SQL injection.
 """
 
 
