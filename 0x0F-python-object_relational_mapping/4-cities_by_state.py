@@ -9,7 +9,7 @@ Takes three arguments: MySQL username, MySQL password, database name
 import sys
 import MySQLdb
 if __name__ == "__main__":
-    usa_db = MySQLdb.connect(host="127.0.0.1",
+    usa_db = MySQLdb.connect(host="localhost",
                              port=3306,
                              user=sys.argv[1],
                              passwd=sys.argv[2],
@@ -17,7 +17,8 @@ if __name__ == "__main__":
     cur = usa_db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name \
                 FROM cities \
-                JOIN states ON (cities.state_id = states.id)")
+                JOIN states ON (cities.state_id = states.id) \
+                ORDER BY cities.id ASC")
     for row in cur.fetchall():
         print("{}".format(row))
     cur.close()

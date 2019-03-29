@@ -10,7 +10,7 @@ Takes 4 arguments: MySQL username, MySQL password, database name, state name
 import sys
 import MySQLdb
 if __name__ == "__main__":
-    usa_db = MySQLdb.connect(host="127.0.0.1",
+    usa_db = MySQLdb.connect(host="localhost",
                              port=3306,
                              user=sys.argv[1],
                              passwd=sys.argv[2],
@@ -19,7 +19,9 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name \
                 FROM cities \
                 JOIN states ON (cities.state_id = states.id) \
-                WHERE states.name = '{}'".format(sys.argv[4]))
+                WHERE states.name = '{}' \
+                ORDER BY cities.id ASC"
+                .format(sys.argv[4]))
     citystring = ', '.join([row[0] for row in cur.fetchall()])
     print(citystring)
     cur.close()
