@@ -8,13 +8,13 @@ Takes three arguments: MySQL username, MySQL password, database name
 import sys
 import MySQLdb
 if __name__ == "__main__":
-    states = MySQLdb.connect(host="127.0.0.1",
+    states = MySQLdb.connect(host="localhost",
                              port=3306,
                              user=sys.argv[1],
                              passwd=sys.argv[2],
                              db=sys.argv[3])
     cur = states.cursor()
-    cur.execute("SELECT * from states")
+    cur.execute("SELECT * from states ORDER BY id ASC")
     for row in cur.fetchall():
         print("{}".format(row))
     cur.close()
