@@ -19,7 +19,7 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name \
                 FROM cities \
                 JOIN states ON (cities.state_id = states.id) \
-                WHERE states.name = '%s'", (sys.argv[4],))
+                WHERE states.name = '{}'".format(sys.argv[4]))
     citystring = ', '.join([row[0] for row in cur.fetchall()])
     print(citystring)
     cur.close()
