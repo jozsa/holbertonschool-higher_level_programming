@@ -14,6 +14,7 @@ from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     This class is linked to the states table.
