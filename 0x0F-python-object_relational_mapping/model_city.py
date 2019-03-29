@@ -15,6 +15,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 
 Base = declarative_base()
 
+
 class City(Base):
     """
     This class is linked to the cities table.
