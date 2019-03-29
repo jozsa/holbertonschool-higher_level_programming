@@ -15,6 +15,13 @@ from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
 class State(Base):
+    """
+    This class is linked to the states table.
+
+    Attributes:
+        id: Integer, required, primary key
+        name: String, required
+    """
     __tablename__ = 'states'
 
     id = Column(Integer,
