@@ -14,10 +14,9 @@ if __name__ == "__main__":
                              passwd=sys.argv[2],
                              db=sys.argv[3])
     cur = states.cursor()
-    cur.execute("SELECT * from states \
-                WHERE name LIKE 'N%' \
-                ORDER BY id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     for row in cur.fetchall():
-        print("{}".format(row))
+        if row[1][0] == 'N':
+            print("{}".format(row))
     cur.close()
     states.close()
