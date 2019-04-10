@@ -26,9 +26,7 @@ def find_peak(list_of_integers):
     if list_of_integers[middle] > list_of_integers[middle + 1] \
             and list_of_integers[middle] > list_of_integers[middle - 1]:
         return list_of_integers[middle]
-    left = list_of_integers[:middle]
-    right = list_of_integers[middle:]
     if list_of_integers[middle + 1] > list_of_integers[middle]:
-        return find_peak(right)
+        return find_peak(list_of_integers[middle:])
     else:
-        return find_peak(left)
+        return find_peak(list_of_integers[:middle])
