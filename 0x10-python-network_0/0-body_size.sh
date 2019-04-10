@@ -1,3 +1,3 @@
 #!/bin/bash
-# Curl a URL and display size of body of response
-curl -s 0.0.0.0:5000 | wc -c
+# Curl a URL passed in and display size of body of response
+curl -s "$1" | wc -c
