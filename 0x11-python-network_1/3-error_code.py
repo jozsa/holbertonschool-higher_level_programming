@@ -6,6 +6,7 @@ If an error is returned, the error code should be
 printed.
 """
 import urllib.request
+import urllib.error
 import sys
 
 
