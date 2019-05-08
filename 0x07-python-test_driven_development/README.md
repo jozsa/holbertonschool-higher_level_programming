@@ -44,11 +44,6 @@ What you should learn from this project:
 ### [7. Lazy matrix multiplication](./101-lazy_matrix_mul.py)
 * Write a function that multiplies 2 matrices by using the module NumPy
 
-
-### [8. CPython #3: Python Strings](./102-python.c)
-* 
-
-
 ---
 
 ## Author
