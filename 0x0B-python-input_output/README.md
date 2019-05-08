@@ -76,19 +76,7 @@ What you should learn from this project:
 
 
 ### [14. Pascal's Triangle](./14-pascal_triangle.py)
-* Technical interview preparation: 
-
-
-### [15. Search and update](./100-append_after.py)
-* Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
-
-
-### [16. Log parsing](./101-stats.py)
-* Write a script that reads stdin line by line and computes metrics:
-
-
-### [17. Hack the VM](./read_write_heap.py)
-* Write a script that finds a string in the heap of a running process, and replaces it.
+* Write a program that prints a Pascal's Triangle 
 
 ---
 
