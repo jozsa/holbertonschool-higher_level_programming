@@ -54,14 +54,6 @@ What you should learn from this project:
 ### [7. Only status code](./100-status_code.sh)
 * Write a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
 
-
-### [8. cURL a JSON file](./101-post_json.sh)
-* Write a Bash script that sends a JSON POST request to a URL passed as the first argument, and displays the body of the response.
-
-
-### [9. Catch me if you can!](./102-catch_me.sh)
-* Write a Bash script that makes a request to 0.0.0.0:5000/catch_me that causes the server to respond with a message containing You got me!, in the body of the response.
-
 ---
 
 ## Author
