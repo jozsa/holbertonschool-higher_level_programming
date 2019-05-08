@@ -71,18 +71,6 @@ What you should learn from this project:
 ### [14. Cities in state](./model_city.py)
 * Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City.
 
-
-### [15. City relationship](./relationship_city.py)
-* Improve the files model_city.py and model_state.py, and save them as relationship_city.py and relationship_state.py:
-
-
-### [16. List relationship](./101-relationship_states_cities_list.py)
-* Write a script that lists all State objects, and corresponding City objects, contained in the database hbtn_0e_101_usa 
-
-
-### [17. From city](./102-relationship_cities_states_list.py)
-* Write a script that lists all City objects from the database hbtn_0e_101_usa 
-
 ---
 
 ## Author
