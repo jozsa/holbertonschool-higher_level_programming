@@ -6,8 +6,8 @@ What you should learn from this project:
 * What is Unit testing and how to implement it in a large project
 * How to serialize and deserialize a Class
 * How to write and read a JSON file
-* What is *args and how to use it
-* What is **kwargs and how to use it
+* What is args and how to use it
+* What is kwargs and how to use it
 * How to handle named arguments in a function
 
 ---
@@ -49,7 +49,7 @@ What you should learn from this project:
 
 
 ### [9. Update #1](./models/rectangle.py)
-* Update the class Rectangle by updating the public method def update(self, *args): by changing the prototype to update(self, *args, **kwargs) that assigns a key/value argument to attributes:
+* Update the class Rectangle by updating the public method def update(self, *args): by changing the prototype to update(self, *args, kwargs) that assigns a key/value argument to attributes:
 
 
 ### [10. And now, the Square!](./models/square.py)
@@ -61,7 +61,7 @@ What you should learn from this project:
 
 
 ### [12. Square update](./models/square.py)
-* Update the class Square by adding the public method def update(self, *args, **kwargs) that assigns attributes:
+* Update the class Square by adding the public method def update(self, *args, kwargs) that assigns attributes:
 
 
 ### [13. Rectangle instance to dictionary representation](./models/rectangle.py)
@@ -85,19 +85,11 @@ What you should learn from this project:
 
 
 ### [18. Dictionary to Instance](./models/base.py)
-* Update the class Base by adding the class method def create(cls, **dictionary): that returns an instance with all attributes already set:
+* Update the class Base by adding the class method def create(cls, dictionary): that returns an instance with all attributes already set:
 
 
 ### [19. File to instances](./models/base.py)
 * Update the class Base by adding the class method def load_from_file(cls): that returns a list of instances:
-
-
-### [20. JSON ok, but CSV?](./models/)
-* Update the class Base by adding the class methods def save_to_file_csv(cls, list_objs): and def load_from_file_csv(cls): that serializes and deserializes in CSV:
-
-
-### [21. Let's draw it](./models/base.py)
-* Update the class Base by adding the static method def draw(list_rectangles, list_squares): that opens a window and draws all the Rectangles and Squares:
 
 ---
 
