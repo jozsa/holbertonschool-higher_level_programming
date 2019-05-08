@@ -56,22 +56,6 @@ What you should learn from this project:
 ### [10. My Github!](./10-my_github.py)
 * Write a Python script that takes your Github credentials (username and password) and uses the Github API to display your id
 
-
-### [11. Time for an interview!](./100-github_commits.py)
-* The Holberton School staff evaluates candidates applying for a back-end position with multiple technical challenges, like this one:
-
-
-### [12. Star Wars API #1](./101-starwars.py)
-* Based on 9-starwars.py:
-
-
-### [13. Star Wars API #2](./102-starwars.py)
-* Based on 101-starwars.py:
-
-
-### [14. Twitter Auth](./103-search_twitter.py)
-* Write a Python script that takes in 3 strings and sends a search request to the Twitter API
-
 ---
 
 ## Author
