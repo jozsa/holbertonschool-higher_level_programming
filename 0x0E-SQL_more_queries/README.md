@@ -85,19 +85,6 @@ What you should learn from this project:
 ### [17. Not my genre](./100-not_my_genres.sql)
 * Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 16-shows_by_genre.sql)
 
-
-### [18. No Comedy tonight!](./101-not_a_comedy.sql)
-* Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 100-not_my_genres.sql)
-
-
-### [19. Rotten tomatoes](./102-rating_shows.sql)
-* Import the database hbtn_0d_tvshows_rate dump to your MySQL server: download
-
-
-### [20. Best genre](./103-rating_genres.sql)
-* Import the database dump from hbtn_0d_tvshows_rate to your MySQL server: download (same as 102-rating_shows.sql)
-
-
 ---
 
 ## Author
