@@ -77,22 +77,6 @@ What you should learn from this project:
 ### [13. Add file](./13-add.js)
 * Write a function that returns the addition of 2 integers.
 
-
-### [14. Const or not const](./100-let_me_const.js)
-* Write a file that modifies the value of myVar to 333
-
-
-### [15. Call me Moby](./101-call_me_moby.js)
-* Write a function that executes x times a function.
-
-
-### [16. Add me maybe](./102-add_me_maybe.js)
-* Write a function that increments and calls a function.
-
-
-### [17. Increment object](./103-object_fct.js)
-* Update this script by adding a new function incr that increments the integer value.
-
 ---
 
 ## Author
