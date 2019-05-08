@@ -70,7 +70,7 @@ What you should learn from this project:
 
 
 ### [13. Score too low](./13-change_class.sql)
-* Write a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+* Write a script that removes all records with a score less than or equal to 5 the table second_table of the database hbtn_0c_0 in your MySQL server.
 
 
 ### [14. Average](./14-average.sql)
@@ -83,22 +83,6 @@ What you should learn from this project:
 
 ### [16. Say my name](./16-no_link.sql)
 * Write a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
-
-
-### [17. Go to UTF8](./100-move_to_utf8.sql)
-* Write a script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
-
-
-### [18. Temperatures #0](./101-avg_temperatures.sql)
-* Import in hbtn_0c_0 database this table dump: download
-
-
-### [19. Temperatures #1](./102-top_city.sql)
-* Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)
-
-
-### [20. Temperatures #2](./103-max_state.sql)
-* Import in hbtn_0c_0 database this table dump: download (same as Temperatures #0)
 
 ---
 
