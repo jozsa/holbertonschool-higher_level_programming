@@ -5,8 +5,8 @@ class Square extends mySquare {
     if (c === undefined) {
       c = 'X';
     }
-    for (let s = 0; s < this.size; s++) {
-      console.log(c.repeat(this.size));
+    for (let s = 0; s < this.height; s++) {
+      console.log(c.repeat(this.width));
     }
   }
 }
