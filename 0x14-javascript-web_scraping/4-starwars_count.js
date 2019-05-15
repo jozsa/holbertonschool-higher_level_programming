@@ -6,9 +6,10 @@ request(url, function (error, response, body) {
     console.log(error);
   } else {
     let info = JSON.parse(body).results;
-    let count = 0;
-    info.forEach(function (element) {
-      if (element.characters.includes('http://swapi.co/api/people/18/')) { count++; }
+    let count = 0; info.forEach(function (element) {
+      element.characters.forEach(function (character) {
+        if (character.includes('18')) { count++; }
+      });
     });
     console.log(count);
   }
