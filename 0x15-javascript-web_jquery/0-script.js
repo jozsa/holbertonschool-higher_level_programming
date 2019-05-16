@@ -1,2 +1,1 @@
-#!/usr/bin/node
-const 
+document.querySelector("header").style.color = "red"
