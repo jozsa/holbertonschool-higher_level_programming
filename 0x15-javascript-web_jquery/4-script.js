@@ -1,10 +1,10 @@
-$("#toggle_header").click(function () {
-    if ($("header").hasClass("green")) {
-        $("header").removeClass("green"); 
-        $("header").addClass("red");
+$("DIV#toggle_header").click(function () {
+    if ($("HEADER").hasClass("green")) {
+        $("HEADER").removeClass("green"); 
+        $("HEADER").addClass("red");
     }
     else {
-        $("header").removeClass("red");
-        $("header").addClass("green");
+        $("HEADER").removeClass("red");
+        $("HEADER").addClass("green");
     }
 });
